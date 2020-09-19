@@ -7,7 +7,7 @@ vagrant plugin install vagrant-vbguest
 vagrant vbguest
 ```
 
-Create a local vagrantfile that contains the deployment configuration, such as:
+Create a local vagrantfile, which is automatically used for the deployment, and should contains the entire deployment configuration, such as:
 ```sh
 Vagrant.configure("2") do |config|
   config.vm.box = "centos/7"
