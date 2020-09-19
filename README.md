@@ -7,4 +7,6 @@ Please note that Shachar Bar (the owner of the repository) is not responsible fo
 
 This repository and all its contents are registered under the GPLv3 license.
 
+All the code samples were tested on MacOS, but may be suitable for Linux as well.
+
 Feel free to drop a message if you have any comment or suggestion. 
