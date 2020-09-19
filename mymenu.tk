@@ -1,0 +1,57 @@
+#!/usr/bin/wish
+
+# Personal Tcl/Tk menu launcher
+#
+# In this code example you can set 3 Zoom meeting URLs and initiate a Zoom meeting by simply click on the meeting button.
+# Just replace the Zoom meeting URL with the relevant button command line.
+# You will need to install TCL/TK libraries to enable the wish interpreter.
+#
+# Author: Shachar Bar <shacharbar@gmail.com>
+# 
+
+frame .fr 
+button .b1 -text "Meeting 1" 
+button .b2 -text "Meeting 2" 
+button .b3 -text "Meeting 3"
+button .exit -text "Quit" -command { exit }
+
+.b1 configure -foreground #bbbbbb
+.b1 configure -highlightbackground "#ffaadd"
+.b1 configure -padx 10
+.b1 configure -font arial
+.b1 configure -command {exec open -a zoom.us "https://....zoom.us/...."}
+
+pack .b1
+
+.b2 configure -foreground #ffaadd
+.b2 configure -highlightbackground "#88aadd"
+.b2 configure -padx 20
+.b2 configure -font arial
+.b2 configure -command {exec open -a zoom.us "https://....zoom.us/...."}
+
+pack .b2
+
+.b3 configure -foreground #ffaadd
+.b3 configure -highlightbackground "#22ffdd"
+.b3 configure -padx 30
+.b3 configure -font arial
+.b3 configure -command {exec open -a zoom.us "https://....zoom.us/...."}
+
+pack .b3
+
+.exit configure -foreground white
+.exit configure -background black
+.exit configure -highlightbackground black
+.exit configure -padx 40
+.exit configure -font arial
+
+pack .exit
+
+proc {main} {argc argv} {
+     global vTcl
+     wm title . menu
+     #wm background red
+     wm geometry . 300x110+0+25
+}
+
+main $argc $argv
